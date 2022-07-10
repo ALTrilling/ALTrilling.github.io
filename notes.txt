@@ -3,4 +3,5 @@ test
 note 1
 note 2
 
-add grill items to store 
+add grill items to corner opening  store 
+add sadety goggles to isle 2
