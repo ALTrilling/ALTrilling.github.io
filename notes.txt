@@ -5,3 +5,4 @@ note 2
 
 add grill items to corner opening  store 
 add sadety goggles to isle 2
+mesh is poultry fence i think
