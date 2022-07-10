@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shattucks Searh</title>
+</head>
+<body>
+  <input type="text" id="search" placeholder="Search">
+  <ul id="results"></ul>
+</body>
+<script defer>
+
+  const data_json = [{'item': 'Fertilizer', 'location': 'opening of store'}, 
+  {'item': 'Umbrellas', 'location': 'opening of store'}, 
+  {'item': 'American Tiki torches', 'location': 'opening of store'}, 
+  {'item': 'Gardening gloves', 'location': 'gardening section (sometimes the seasonal section) (right near the opening of the store)'}, {'item': 'Plant food', 'location': 'gardening section (sometimes the seasonal section) (right near the opening of the store)'}, {'item': 'Gardening tools', 'location': 'gardening section (sometimes the seasonal section) (right near the opening of the store)'}, {'item': 'Shovels', 'location': 'gardening section (sometimes the seasonal section) (right near the opening of the store)'}, {'item': 'Hedge Trimmer', 
+'location': 'gardening section (sometimes the seasonal section) (right near the opening of the store)'}, {'item': 'Grass Seed', 'location': 'gardening section (sometimes the seasonal section) (right near the opening of the store)'}, {'item': 'More fertilizer', 'location': 'gardening section (sometimes the seasonal section) (right near the opening of the store)'}, 
+{'item': 'Axes', 'location': 'right next to seasonal section (in the opening of the store)'}, 
+{'item': 'Steel tools', 'location': 'right next to seasonal section (in the opening of the store)'}, 
+{'item': 'Chain saw', 'location': 'right next to seasonal section (in the opening of the store)'}, 
+{'item': 'Umbrellas', 'location': 'opening of store'}, {'item': 'Bristle cleaner', 'location': 'opening of store in corner'}, {'item': 'Paint brushes', 'location': 'right in front  close to the cash register'}, {'item': 'Caulk', 'location': 'right in front close to the cash register'}, {'item': 'American flags', 'location': 'Isle 1 section 1'}, {'item': 'Fertilizer', 'location': 'Isle 1 section 1'}, {'item': 'Clocks', 'location': 'Isle 1 section 1'}, {'item': 'Bird Seed', 'location': 'Isle 1 section 1'}, {'item': 'Bird feeders', 'location': 'Isle 1 section 1'}, 
+{'item': 'Plastic plant containers', 'location': 'Isle 1 section 1'}, {'item': 'Ceramic plant containers', 'location': 'Isle 1 section 1'}, {'item': 'Grill Poker', 'location': 'Isle 1 section 1'}, {'item': 'Generic Tiki torches', 'location': 'Isle 1 section 1'}, {'item': 'Mesh', 'location': 'Isle 1 section 1'}, {'item': 'Pliers', 'location': 'Isle 1 section 2'}, {'item': 'Compressed air canisters', 'location': 'Isle 1 section 2'}, {'item': 'Bug control / Bug Repellent', 'location': 'Back of Isle 1'}, {'item': 'Sponges', 'location': 'Back of Isle 1'}, {'item': 'Clear crates', 'location': 'Back of Isle 1'}, {'item': 'Clothes Hangers / Clothes racks', 'location': 'Back of Isle 1'}, {'item': 'Hoses', 'location': 'Isle 2 section 1'}, {'item': 'Hose adapters', 'location': 'Isle 2 section 1'}, {'item': 'Sprinklers', 'location': 'Isle 2 section 1'}, {'item': 'Watering Cans', 'location': 'Between Isle 1 and Isle 2 between section 1 and section 2'}, {'item': 'Mouse traps', 'location': 'Isle 2 section 1'}, {'item': 'Bug killer', 'location': 'Isle 2 section 1 '}, {'item': 'More fans', 'location': 'Isle 3 section 1'}, {'item': 'Trash bags', 'location': 'Isle 3 section 1'}, {'item': 'Trash cans', 'location': 'Isle 3 section 1'}, {'item': 'Irons (as in ironing clothes)', 'location': 'Isle 3 section 1'}, {'item': 'Sponges', 'location': 'Isle 3 section 2'}, {'item': 'Toilet paper', 'location': 'Isle 3 section 2'}, {'item': 'Cleaning mist', 'location': 'Isle 3 section 2'}, {'item': 'Dust pans', 'location': 'Isle 3 section 2'}, {'item': 'Nets', 'location': 'Isle 3 section 2'}, {'item': 'Drills', 'location': 'Isle 3 section 2'}, {'item': 'Drill bits', 'location': 'Isle 3 section 2'}, {'item': 'Rotating Saw Blades', 'location': 'Isle 3 section 2'}, {'item': 'Clamps', 'location': 'Isle 3 section 2'}, {'item': 'Soap', 'location': 'Isle 3 section 3'}, {'item': 'Paint roller', 'location': 'Back of isle 4'}, {'item': 'Metal trays', 'location': 'Isle 4 section 1'}, {'item': 'Glass Jars', 'location': 'Isle 4 section 1'}, {'item': 'Thermos', 'location': 'Isle 4 section 2'}, {'item': 'Light bulbs', 'location': 'Isle 4 section 2'}, {'item': 'Smoke detectors', 'location': 'Isle 4 section 2'}, {'item': 'Pliers', 'location': 'Isle 4 section 2'}, {'item': 'Plastic cords + ropes', 'location': 'Isle 4 section 3'}, {'item': "Hoses that I don't think are for water", 'location': 'Isle 4 section 3'}, {'item': 'Wax', 'location': 'Between Isle 4 and Isle 3 between Section 2 and section 3'}, {'item': 'Small metal home attachments (like door knobs and light switches) (most where made of copper)', 'location': 'Front of Isle 4'}, {'item': 'Canopy Kit', 'location': 'Front of Isle 1'}, {'item': 'Hooks', 'location': 'Warehouse - First Isle 1 on left side'}, {'item': 'Springs', 'location': 'Warehouse - First Isle 1 on left side'}, {'item': 'Window stuff / window cleaners / window sponges', 'location': 'Warehouse - Second Isle 1 on left side'}, {'item': 'Sinks', 'location': 'Warehouse - First isle from Back left'}, {'item': 'Door handles', 'location': 'Warehouse - near open area on left'}, {'item': 'Sink adapters', 'location': 'Warehouse - First isle from Back left'}, {'item': 'Hose adapters', 'location': 'Warehouse - First isle from Back left'}, {'item': 'Screws', 'location': 'Warehouse - mid section near desk'}, {'item': 'Big bags of soil', 'location': 'Warehouse - back'}, {'item': 'Paint cans', 'location': 'Warehouse - back first left (also on the way to the desk in the warehouse)'}, {'item': 'Spray paint', 'location': 'Warehouse - back second left'}, {'item': 'Batteries (duracell)', 'location': 'Warehouse - I think back'}, {'item': 'Big empty pails / Big empty cans', 'location': 'Warehouse - back'}, {'item': 'More hoses', 'location': 'Warehouse - back'}]
+  
+  document.getElementById("search").addEventListener("keyup", async function(event) {
+      // search through data_json and display the results
+        const input_search_term = document.getElementById("search").value;
+        const results = document.getElementById("results");
+        results.innerHTML = "";
+        if (input_search_term.includes("|"))
+        {
+            const search_terms = input_search_term.split("|");
+            for (const search_term of search_terms)
+            {
+                // for (const [item, location] of data_json)
+                data_json.forEach(data => {
+                    if (data.item.includes(search_term))
+                    {
+                      results.innerHTML += `<li>${data.item} is in ${data.location}</li>`;
+                    }
+                });
+            }
+        }
+        else if (input_search_term.includes("&"))
+        {
+          // https://stackoverflow.com/questions/15201939/jquery-javascript-check-string-for-multiple-substrings
+          const search_terms = search_term.split("&");
+          // for (const [key, value] of Object.entries(data_json))
+          // for (const [item, location] of data_json)
+          data_json.forEach(data => {
+                    if (search_terms.every(term => data.item.includes(search_terms)))
+                    {
+                      results.innerHTML += `<li>${data.item} is in ${data.location}</li>`;
+                    }
+                    
+                });
+        }
+        else if (input_search_term.length > 0)
+        {
+          // for (const [key, value] of Object.entries(data_json)) {
+            // for (const [item, location] of data_json)
+            data_json.forEach(data => {
+              // console.log(data.item);
+                if (data.item.toLowerCase().includes(input_search_term.toLowerCase()))
+                {
+                  results.innerHTML += `<li>${data.item} is in ${data.location}</li>`;
+                }
+            });
+        }
+        else
+        {
+            results.innerHTML += `<li>Displaying all items</li>`;
+            // for (const [key, value] of Object.entries(data_json)) {
+            //   results.innerHTML += `<li>${key} is in ${value}</li>`;
+            // }
+
+            data_json.forEach(data => {
+                results.innerHTML += `<li>${data.item} is in ${data.location}</li>`;
+            });
+        }
+        
+      
+  });
+  
+</script>
+</html>
