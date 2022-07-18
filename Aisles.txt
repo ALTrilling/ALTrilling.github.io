@@ -1,0 +1,86 @@
+aisle-1-section-1:
+    Hammers
+    Chisels
+    Measuring_tools
+    Tool_boxes
+    Sockets
+    Wrenches
+    Pliers
+    Screwdrivers
+aisle-2-section-1:
+    Power_Tools
+    Storage_Totes
+    Signs
+    Numbers
+    Mail_Boxes
+    Mail_Posts
+    Sprinklers/Nozzles
+aisle-3-section-1:
+    Closet_Organizers
+    Household_Cleaners
+    Vacuum_Bags
+    Fans_Laundry
+    Dehumidifiers
+    Buckets
+    Squeegees/Sponges
+
+aisle-1-section-2:
+    Switches
+    Outlets
+    Electrical_Fittings
+    Auto_Accesories
+    Air_Pumps
+
+aisle-2-section-2:
+    Flood_Lights
+    Phone_Accessories
+
+aisle-3-section-2:
+    Vacuums
+    Buckets
+    Squeegees/Sponges
+    Electrical_Wiring
+
+aisle-4-section-2:
+    Speciality_Bulbs
+    Light_Bulbs
+    Fluorescent_Bulbs
+    Extension_Cords
+    Circuit_Breakers
+    Surge_Protectors
+
+aisle-14:
+    Waterproofing
+    Exterior_Stain
+    Exterior_Paint
+
+aisle-15:
+    Sandpaper
+    Interior_Paint
+    Pro_Paint
+
+aisle-16:
+    Solvents
+    Thinners
+    Primers
+    Speciality_Paint
+    Stains
+    Varnishes
+aisle-17:
+    Spray_Paint_Poly_Sheeting
+    Pointers_Tools
+    Paint_Applications
+aisle-18:
+    Construction_Adhesives
+    Caulk
+    Patching_Materials
+    Paint_Sprayers
+aisle-19:
+    Tape
+    Glues
+aisle-20:
+    Wallpaper_Accessories
+    Batteries
+aisle-21:
+    Flashlights
+
