@@ -5,3 +5,5 @@ mesh is poultry fence i think
 
 MAKE SURE TO SEE IF THE STORE HAS ENOUGH ITEMS BY HITTING THE SLASH KEY!!!
 Return items by hitting the star (the asterisk) key
+
+For invoices hit the enter key so that the costumer can sign and be charged (rather than paying by cash/check/credit).
