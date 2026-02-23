@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Adrian Trilling Resume</title>
+
+<style>
+  body {
+    font-family: Calibri, Candara, "Segoe UI", "Trebuchet MS", sans-serif;
+    line-height: 1.35;
+    max-width: 850px;
+    margin: 40px auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 28px;
+    color: #1a5fb4;
+ }
+
+  .contact {
+    text-align: center;
+    margin: 6px 0 20px 0;
+    font-size: 14px;
+  }
+
+.section-title {
+  font-weight: bold;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  color: #1a5fb4;
+}
+
+  .entry {
+    margin-bottom: 2px;
+  }
+
+  ul {
+    margin: 2px 0 12px 0;
+    padding-left: 18px;
+  }
+
+  li {
+    margin-bottom: 1px;
+  }
+
+  ul li::marker {
+    font-size: 1.2em;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Adrian Trilling</h1>
+
+<div class="contact">
+  altrilling@wpi.edu | 617-299-9263 | Arlington, MA<br>
+  Sophomore taking graduate-level Computer Science coursework; proficient in low-level coding, ML, and infrastructure
+</div>
+
+<div class="section-title">EDUCATION</div>
+<div class="entry">
+  Sophomore at Worcester Polytechnic Institute (Expected graduation date: May 2028)
+</div>
+<ul>
+  <li>Master of Science in Computer Science</li>
+  <li>Bachelor of Science in Computer Science and Mathematics; minor in Electrical Engineering</li>
+  <li>GPA: 3.6 | Dean’s List | Taking both undergraduate and graduate-level Computer Science courses</li>
+</ul>
+
+<div class="section-title">TECHNICAL SKILLS</div>
+<div class="entry">Languages: C, Go, Zig, RISC-V Assembly, Python, JavaScript, Java, OCaml, ReasonML, Elixir, Uiua</div>
+<div class="entry">Security & Infrastructure: Wireshark, MITMproxy, ScaPy, Ghidra, Frida, Docker, AWS, Linux, NixOS, Terraform</div>
+<div class="entry">Web Technologies: Modern full-stack development, browser automation tools, network analysis</div>
+<div class="entry">Paradigms: Functional programming, stack-based computation, array-oriented programming (Uiua)</div>
+
+<div class="section-title">ACADEMIC PROJECTS</div>
+
+<div class="entry">
+  <strong>Software Engineer on Wounds Analysis Mobile App - WPI, May 2025 to Present</strong><br>
+  Working as a backend developer for a WPI professor on a mobile app that analyzes photos using machine learning
+</div>
+<ul>
+  <li>Rebuilt backend infrastructure for wound detection, improving performance and reliability</li>
+  <li>Migrated database from MongoDB to SQL and refactored shell/Python scripts for clarity and maintainability</li>
+  <li>Replaced Flask with FastAPI on AWS EC2, adding OpenAPI support for easier endpoint testing</li>
+  <li>Converted PyTorch models (CNN, MLP, linear regression) to ONNX for flexible deployment on backend and clients</li>
+  <li>Reduced AWS costs by hundreds of dollars per month through optimized architecture and resource use.</li>
+</ul>
+
+<div class="entry">
+  <strong>WebGL Vector Graphics Editor - WPI, Spring 2025</strong><br>
+  Created JavaScript/WebGL application for loading, displaying and editing SVG files
+</div>
+<ul>
+  <li>Implemented affine transformations with transformation matrices for rotation, scaling, and translation</li>
+  <li>Built matrix composition system to handle multiple transformations while preserving order of operations</li>
+  <li>Developed coordinate system conversions between screen space, world space, and normalized device space</li>
+  <li>Implemented interactive drawing system with mouse/keyboard controls and real-time viewport transformations</li>
+</ul>
+
+<div class="entry">
+  <strong>Unix/Linux Shell Implementation - WPI, Fall 2024</strong><br>
+  Built a custom shell in C supporting pipes, I/O redirection, and background process execution
+</div>
+<ul>
+  <li>Implemented core shell functionality including process creation, job control, and built-in commands</li>
+  <li>Created system call wrappers for fork(), exec(), and waitpid() to manage process life cycles</li>
+  <li>Added support for shell scripting features including variables, control flow, and command substitution</li>
+</ul>
+
+<div class="entry">
+  <strong>Multi-threaded Raytracer - WPI, Fall 2024</strong><br>
+  Parallelized a C raytracer using POSIX threads to distribute rendering workload across CPU cores
+</div>
+<ul>
+  <li>Implemented double buffering to overlap I/O operations with frame rendering</li>
+  <li>Created thread synchronization system using semaphores for coordinating physics calculations</li>
+  <li>Optimized performance through strategic thread allocation and barrier synchronization</li>
+</ul>
+
+<div class="entry">
+  <strong>CPU Scheduler Simulator - WPI, Fall 2024</strong><br>
+  Programmed process scheduler in C implementing FIFO, SJF, Round Robin, and Priority algorithms
+</div>
+<ul>
+  <li>Built performance analysis tools measuring response time, turnaround time, and wait time</li>
+  <li>Created test workloads to evaluate scheduler behavior under various conditions</li>
+  <li>Implemented priority-based scheduling with multi-level feedback queue</li>
+</ul>
+
+</body>
+</html>
